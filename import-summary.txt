@@ -1,0 +1,91 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* ic_launcher-web.png
+* proguard-project.txt
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:19.1.0
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* libs/BaiduLBS_Android.jar => app/libs/BaiduLBS_Android.jar
+* libs/MobCommons-2016.0714.1402.jar => app/libs/MobCommons-2016.0714.1402.jar
+* libs/MobTools-2016.0714.1402.jar => app/libs/MobTools-2016.0714.1402.jar
+* libs/SMSSDK-2.1.1.jar => app/libs/SMSSDK-2.1.1.jar
+* libs/ShareSDK-Core-2.7.4.jar => app/libs/ShareSDK-Core-2.7.4.jar
+* libs/ShareSDK-QQ-2.7.4.jar => app/libs/ShareSDK-QQ-2.7.4.jar
+* libs/ShareSDK-QZone-2.7.4.jar => app/libs/ShareSDK-QZone-2.7.4.jar
+* libs/ShareSDK-Wechat-2.7.4.jar => app/libs/ShareSDK-Wechat-2.7.4.jar
+* libs/ShareSDK-Wechat-Core-2.7.4.jar => app/libs/ShareSDK-Wechat-Core-2.7.4.jar
+* libs/ShareSDK-Wechat-Moments-2.7.4.jar => app/libs/ShareSDK-Wechat-Moments-2.7.4.jar
+* libs/android-gif-drawable.jar => app/libs/android-gif-drawable.jar
+* libs/armeabi-v7a/libBaiduMapSDK_base_v4_1_1.so => app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_base_v4_1_1.so
+* libs/armeabi-v7a/libBaiduMapSDK_map_v4_1_1.so => app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_map_v4_1_1.so
+* libs/armeabi-v7a/libBaiduMapSDK_search_v4_1_1.so => app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_search_v4_1_1.so
+* libs/armeabi-v7a/libBaiduMapSDK_util_v4_1_1.so => app/src/main/jniLibs/armeabi-v7a/libBaiduMapSDK_util_v4_1_1.so
+* libs/armeabi-v7a/libeasemobservice.so => app/src/main/jniLibs/armeabi-v7a/libeasemobservice.so
+* libs/armeabi-v7a/liblocSDK7.so => app/src/main/jniLibs/armeabi-v7a/liblocSDK7.so
+* libs/armeabi-v7a/libpl_droidsonroids_gif.so => app/src/main/jniLibs/armeabi-v7a/libpl_droidsonroids_gif.so
+* libs/armeabi-v7a/libpl_droidsonroids_gif_surface.so => app/src/main/jniLibs/armeabi-v7a/libpl_droidsonroids_gif_surface.so
+* libs/armeabi-v7a/libsmssdk.so => app/src/main/jniLibs/armeabi-v7a/libsmssdk.so
+* libs/base_animation.jar => app/libs/base_animation.jar
+* libs/easemobchat_2.3.4.jar => app/libs/easemobchat_2.3.4.jar
+* libs/fastjson-1.1.39.jar => app/libs/fastjson-1.1.39.jar
+* libs/glide-3.7.0.jar => app/libs/glide-3.7.0.jar
+* libs/nineoldandroids-2.4.0.jar => app/libs/nineoldandroids-2.4.0.jar
+* libs/okhttp-3.4.1.jar => app/libs/okhttp-3.4.1.jar
+* libs/okio-1.10.0.jar => app/libs/okio-1.10.0.jar
+* libs/umeng-analytics-v5.4.1.jar => app/libs/umeng-analytics-v5.4.1.jar
+* libs/universal-image-loader-1.9.2.jar => app/libs/universal-image-loader-1.9.2.jar
+* lint.xml => app/lint.xml
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+* src/.DS_Store => app/src/main/resources/.DS_Store
+* src/com/.DS_Store => app/src/main/resources/com/.DS_Store
+* src/com/dq/.DS_Store => app/src/main/resources/com/dq/.DS_Store
+* src/com/dq/itopic/.DS_Store => app/src/main/resources/com/dq/itopic/.DS_Store
+* src/com/dq/itopic/activity/.DS_Store => app/src/main/resources/com/dq/itopic/activity/.DS_Store
+* src/com/dq/itopic/bean/.DS_Store => app/src/main/resources/com/dq/itopic/bean/.DS_Store
+* src/com/dq/itopic/easemob/.DS_Store => app/src/main/resources/com/dq/itopic/easemob/.DS_Store
+* src/com/dq/itopic/layout/.DS_Store => app/src/main/resources/com/dq/itopic/layout/.DS_Store
+* src/com/dq/itopic/manager/.DS_Store => app/src/main/resources/com/dq/itopic/manager/.DS_Store
+* src/com/dq/itopic/tools/.DS_Store => app/src/main/resources/com/dq/itopic/tools/.DS_Store
+* src/com/dq/itopic/video/.DS_Store => app/src/main/resources/com/dq/itopic/video/.DS_Store
+* src/com/dq/itopic/view/.DS_Store => app/src/main/resources/com/dq/itopic/view/.DS_Store
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

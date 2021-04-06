@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/activityContainerStyle"
+    android:fitsSystemWindows="false"
+    android:background="@color/user_bg">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--            app:layout_behavior="com.dq.itopic.activity.personal.AppbarZoomBehavior"-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent"
+            app:elevation="0dp"
+            >
+
+            <!-- contentScrim 就是闪了那么一下的颜色-->
+            <!--  CollapsingToolbarLayout只能配合Toolbar ，才能实现：滚到顶部时候Toolbar的高度卡住顶部-->
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <ImageView
+                    android:id="@+id/cover_iv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/profile_cover_default"
+                    android:scaleType="centerCrop"/>
+
+                <include layout="@layout/personal_home_header"/>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetRight="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetEnd="0dp">
+
+                    <RelativeLayout
+                        android:id="@+id/title_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0"
+                        android:background="@color/navigation_color">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_alignParentBottom="true"
+                            android:layout_height="@dimen/navigation_height">
+
+                            <ImageView style="@style/titleBackStyle" />
+
+                            <TextView style="@style/titleTextStyle"/>
+
+                            <ImageView
+                                android:id="@+id/more_iv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="12dp"
+                                android:src="@drawable/nav_btn_more_normal" />
+
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/title_stay_nobg_layout"
+        android:background="@null"
+        style="@style/titleBackGroundStyle" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="@dimen/navigation_height">
+
+            <ImageView
+                android:id="@+id/back_nobg_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="9dp"
+                android:src="@drawable/nav_btn_back_shadow_bg"/>
+
+            <ImageView
+                android:id="@+id/more_nobg_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:paddingRight="12dp"
+                android:src="@drawable/nav_btn_more_shadow_bg" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

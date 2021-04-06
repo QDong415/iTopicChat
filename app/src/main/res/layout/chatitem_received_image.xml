@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="@dimen/photo_chat_avatar_size"
+            android:layout_height="@dimen/photo_chat_avatar_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/user_photo" />
+
+        <com.dq.itopic.activity.chat.bubble.BubbleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/bubble_iv"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/avatar_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="150dp"
+            android:scaleType="fitCenter"
+            app:bubble_angle="4dp"
+            app:bubble_arrowHeight="0dp"
+            app:bubble_arrowLocation="left"
+            app:bubble_arrowOffset="-3.5dp"
+            app:bubble_arrowTop="20dp"
+            app:bubble_arrowWidth="0dp"
+            />
+
+        <!-- 尖嘴效果： app:bubble_arrowHeight="3dp"  app:bubble_arrowWidth="6dp"-->
+
+    </RelativeLayout>
+
+</LinearLayout>

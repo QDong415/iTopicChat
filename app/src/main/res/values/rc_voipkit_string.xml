@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="rc_voip_call_waiting">正在等待对方接受邀请...</string>
+
+    <string name="rc_voip_audio_call_inviting">正在邀请你进行语音聊天...</string>
+    <string name="rc_voip_video_call_inviting">正在邀请你进行视频聊天...</string>
+    <string name="rc_voip_mute">静音</string>
+    <string name="rc_voip_hangup">挂断</string>
+    <string name="rc_voip_answer">接听</string>
+    <string name="rc_voip_camera">摄像头</string>
+    <string name="rc_voip_handfree">免提</string>
+    <string name="rc_voip_disable_camera">关闭摄像头</string>
+    <string name="rc_voip_enable_camera">开启摄像头</string>
+    <string name="rc_voip_float_window_not_allowed">请打开悬浮窗权限</string>
+
+    <string name="rc_permission_grant_needed">您需要在设置中打开权限</string>
+    <string name="rc_confirm">确认</string>
+    <string name="rc_cancel">取消</string>
+</resources>

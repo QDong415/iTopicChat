@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.huawei.agconnect'
+
+android {
+    signingConfigs {
+        config {
+            keyAlias 'itopic'
+            keyPassword '123456'
+            storeFile file('/Users/dongjin/Documents/keystore/itopic.keystore')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 29
+    buildToolsVersion '29'
+    defaultConfig {
+        applicationId "com.dq.itopic"
+        minSdkVersion 19
+        targetSdkVersion 29
+        signingConfig signingConfigs.config
+        multiDexEnabled true
+        ndk {
+            abiFilters( "armeabi-v7a")
+        }
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "JjRS35nTSP9k7ZSBKt8DM6",
+                GETUI_APP_KEY   : "AQngfBxi8pATf95ENg2Kj9",
+                GETUI_APP_SECRET: "G6gnMrlBs06cBY9lqyL5V"
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*'], dir: 'libs')
+    implementation 'androidx.viewpager:viewpager:1.0.0'
+    implementation 'androidx.fragment:fragment:1.1.0'
+    implementation 'com.google.android.material:material:1.2.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.2.2'
+    implementation 'com.shizhefei:ViewPagerIndicator:1.1.9.androidx'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.alibaba:fastjson:1.1.72.android'
+    implementation 'in.srain.cube:ultra-ptr:1.0.11'
+    implementation 'com.huawei.hms:push:5.0.4.302'
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    implementation 'com.qiniu:qiniu-android-sdk:8.0.+'
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.6.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.11.0'
+    implementation 'com.github.SherlockGougou:BigImageViewPager:androidx-6.1.1'
+    implementation 'io.agora.rtc:full-sdk:3.3.2'
+}
+
+repositories {
+    flatDir { dirs 'aars' }
+}

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/white_background"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:gravity="center_vertical"
+    android:paddingTop="10dp" >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/photo_chat_avatar_size"
+        android:layout_height="@dimen/photo_chat_avatar_size"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/user_photo" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中"
+            android:textColor="@color/text_black_color"
+            android:textSize="14sp" />
+
+                <TextView
+            android:id="@+id/item_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                    android:layout_marginRight="12dp"
+            android:text="加载中"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/text_gray_color"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp">
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+  		android:paddingTop="4dp"
+  		android:paddingBottom="4dp"
+  		android:paddingLeft="12dp"
+  		android:paddingRight="12dp"
+  		android:textSize="13sp"
+  		android:clickable="true"
+  		android:textColor="@color/white_color"
+        android:background="@drawable/green_round_background"
+        android:focusable="false"
+        android:text="通过" />
+    
+       <TextView
+           android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已添加"
+              android:visibility="gone"
+            android:textColor="@color/text_black_color"
+            android:textSize="13sp" />
+</FrameLayout>
+</LinearLayout>

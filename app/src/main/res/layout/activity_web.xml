@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle"
+    android:background="@color/white_color">
+
+    <RelativeLayout style="@style/titleBackGroundStyle" android:paddingRight="0dp">
+
+        <ImageView style="@style/titleBackStyle" />
+
+
+        
+        <TextView
+            style="@style/titleTextStyle"
+            android:maxLength="8"
+            android:text="加载中" />
+
+         <TextView
+             android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="-14dp"
+            android:layout_toRightOf="@id/back"
+            android:textColor="@color/red_color"
+            android:text="关闭" />
+        
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/progressBarHorizontal_color"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:layout_alignParentBottom="true"
+            android:max="100"
+            android:progress="0"
+            android:focusable="false"
+            android:secondaryProgress="0" />
+        
+     
+    </RelativeLayout>
+
+    <View style="@style/LineStyle" />
+
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+</LinearLayout>

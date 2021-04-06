@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="false"
+    style="@style/activityContainerStyle" >
+
+    <RelativeLayout
+        style="@style/titleBackGroundStyle" >
+
+        <TextView
+            android:text="消息"
+            android:layout_height="@dimen/navigation_height"
+            android:id="@id/title"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:textSize = "18sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/text_black_color"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/search_layout"
+        layout="@layout/layout_search_bar"/>
+
+       <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+        android:id="@+id/listview"
+        
+            style="@style/ListViewStyle" />
+        
+    </RelativeLayout>
+    
+</LinearLayout>

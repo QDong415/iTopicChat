@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/iv_large_preview_Mask"
+        android:layout_width="match_parent"
+        android:background="#E6141C24"
+        android:visibility="invisible"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/rc_voip_call_minimize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onMinimizeClick"
+        android:visibility="gone"
+        android:src="@drawable/rc_voip_minimize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_below="@+id/rc_voip_call_minimize">
+
+        <ImageView
+            android:id="@+id/rc_voip_user_portrait"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/user_photo" />
+
+        <TextView
+            android:id="@+id/rc_voip_user_name"
+           android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rc_voip_user_portrait"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_setupTime"
+            android:layout_below="@+id/rc_voip_user_name"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:textColor="#66FFFFFF"
+            android:textSize="14sp" />
+
+        <!--记录rc_voip_call_remind_info
+        单人视频.被叫  单人语音.主叫\被叫
+        -->
+        <TextView
+            android:id="@+id/rc_voip_call_remind_info"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rc_voip_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:text="@string/rc_voip_call_waiting" />
+        <!--单人视频——被叫-->
+    </RelativeLayout>
+</RelativeLayout>

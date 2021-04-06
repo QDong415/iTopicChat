@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="32dp"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:text="搜索：昵称、动态"
+        android:textColor="@color/text_gray_color"
+        android:textSize="13sp"
+        android:paddingLeft="12dp"
+        android:focusable="false"
+        android:paddingRight="12dp"
+        android:drawableLeft="@drawable/searchbar_textfield_search_icon"
+        android:background="@drawable/white_fill_round" />
+
+</FrameLayout>
+
+

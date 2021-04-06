@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle"
+    android:background="@color/white_color"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/searchbar_et"
+            android:layout_width="0dp"
+            android:layout_height="28dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/white_single_round"
+            android:drawableLeft="@drawable/searchbar_textfield_search_icon"
+            android:gravity="center"
+            android:hint="输入名称关键字"
+            android:paddingLeft="12dp"
+            android:maxLines="1"
+            android:paddingRight="12dp"
+            android:textColor="@color/text_black_color"
+            android:textColorHint="@color/text_gray_color"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/send_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/orange_round_background"
+            android:gravity="left"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="6dp"
+            android:paddingRight="6dp"
+            android:text="确定"
+            android:textColor="@color/white_color"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <com.dq.itopic.views.PagedListView
+        android:id="@+id/paged_listview"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        style="@style/ListViewStyle" />
+
+    <LinearLayout
+        android:visibility="visible"
+        android:id="@+id/history_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#979797"
+                android:text="最近搜索"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                />
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/gridviewolddata"
+            style="@style/ListViewStyle"
+            android:background="@color/white_color"
+            >
+
+        </ListView>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview"
+        android:visibility="gone"
+        android:background="@color/white_color"
+        style="@style/ListViewStyle">
+
+    </ListView>
+
+</LinearLayout>

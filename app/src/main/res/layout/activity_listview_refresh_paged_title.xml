@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle">
+
+	<RelativeLayout style="@style/titleBackGroundStyle" >
+
+		<ImageView style="@style/titleBackStyle" />
+
+		<TextView
+			style="@style/titleTextStyle" />
+
+		<TextView
+			style="@style/TitleRightBtnNoBackgroundStyle"
+			android:text="" />
+	</RelativeLayout>
+
+	<View style="@style/LineStyle" />
+
+	<include layout="@layout/activity_listview_refresh_paged"></include>
+</LinearLayout>

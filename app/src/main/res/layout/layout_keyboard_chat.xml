@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/horizontalspit_view_height"
+        android:background="@color/divider_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/input_bg"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/rl_multi_and_send"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            >
+
+            <!-- 语音/文字切换-->
+            <ImageView
+                android:id="@+id/btn_voice_or_text"
+                android:layout_width="43dp"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:paddingRight="5dp"
+                android:src="@drawable/chat_icon_voice" />
+
+            <!--输入框-->
+            <com.dq.itopic.views.keyboard.widget.EmoticonsEditText
+                android:id="@+id/et_chat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_face"
+                android:layout_toRightOf="@+id/btn_voice_or_text"
+                android:background="@drawable/white_fill_round"
+                android:focusableInTouchMode="true"
+                android:lineSpacingExtra="2dp"
+                android:maxLines="4"
+                android:paddingBottom="6dp"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"
+                android:textColor="@color/black_gray"
+                android:paddingTop="6dp"
+                android:layout_marginRight="7dp"
+                android:textSize="16sp"
+                />
+
+            <!--语音输入-->
+            <Button
+                android:id="@+id/btn_voice"
+                android:layout_width="match_parent"
+                android:layout_height="34dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/btn_face"
+                android:layout_toRightOf="@+id/btn_voice_or_text"
+                android:background="@drawable/btn_voice"
+                android:text="@string/btn_text_speak"
+                android:textColor="@color/black_gray"
+                android:layout_marginRight="7dp"
+                android:visibility="gone"
+                />
+
+            <!--表情-->
+            <ImageView
+                android:id="@+id/btn_face"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/comment_emoji_black_normal" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_multi_and_send"
+            android:layout_width="58dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:focusableInTouchMode="true"
+            android:orientation="horizontal">
+
+            <!--apps 功能-->
+            <ImageView
+                android:id="@+id/btn_multimedia"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/chat_icon_more_black_l_normal" />
+
+            <!--发送-->
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/orange_round_background"
+                android:text="@string/btn_text_send"
+                android:visibility="gone"
+                android:textColor="@color/white_color"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.dq.itopic.views.keyboard.widget.FuncLayout
+        android:id="@+id/ly_kvml"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="gone" />
+</LinearLayout>

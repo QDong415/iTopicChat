@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@drawable/white_background"
+	android:orientation="horizontal"
+	android:paddingBottom="12dp"
+	android:gravity="center_vertical"
+	android:paddingTop="12dp" >
+
+	<RelativeLayout
+		android:layout_width="wrap_content"
+		android:orientation="vertical"
+		android:gravity="center_horizontal"
+		android:layout_marginLeft="16dp"
+		android:layout_height="wrap_content">
+
+		<com.dq.itopic.views.CircleImageView
+			xmlns:app="http://schemas.android.com/apk/res-auto"
+			android:id="@+id/avatar_iv"
+			android:layout_width="44dp"
+			android:layout_height="44dp"
+			app:civ_border_width="1dp"
+			app:civ_border_color="@color/gray_color"
+			android:src="@drawable/user_photo_circle" />
+
+
+	</RelativeLayout>
+
+
+	<TextView
+		android:id="@+id/name_tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="加载中"
+		android:layout_marginLeft="15dp"
+		android:textColor="@color/text_black_color"
+		android:textSize="17sp" />
+
+
+</LinearLayout>

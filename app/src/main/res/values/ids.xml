@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="title" type="id"/>
+    <item name="back" type="id"/>
+      <item name="title_layout" type="id"/>
+    <item name="gridView" type="id"/>
+    <item name="user_head" type="id"/>
+        <item name="title_right" type="id"/>
+    <!-- numberPicker -->
+       <item name="np__increment" type="id" />
+    <item name="np__decrement" type="id" />
+    <item type="id" name="id_autolayout" />
+    <item type="id" name="id_tag_pageset" />
+    <item type="id" name="id_toolbar_left" />
+    <item type="id" name="id_toolbar_right" />
+</resources>

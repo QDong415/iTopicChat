@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+android:gravity="center"
+    android:orientation="vertical"
+ >
+ <View
+     android:id="@+id/empty_topline"
+     style="@style/LineStyle"></View>
+
+ <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 		android:textColor="@color/text_gray_color"
+      android:textSize="15sp"
+      android:text="没有评论哦，快来评论吧"
+       android:paddingTop="15dp"
+ android:paddingBottom="20dp"
+      android:drawablePadding="10dp"
+        android:gravity="center_horizontal" />
+
+</LinearLayout>

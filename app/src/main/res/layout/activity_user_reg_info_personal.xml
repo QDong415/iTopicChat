@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle"
+    android:background="@color/white_color"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout style="@style/titleBackGroundStyle"
+        android:background="@color/white_color">
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            android:textColor="@color/text_black_color"
+            style="@style/titleTextStyle"
+            android:text="完善资料" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <com.dq.itopic.views.CircleImageView
+                android:id="@id/user_head"
+                android:layout_width="145dp"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/user_photo_circle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_gray_color"
+                android:textSize="13sp"
+                android:text="*请上传头像"
+                android:layout_marginTop="8dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginTop="27dp"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:id="@+id/name_et"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="请输入昵称（必填）"
+                    android:maxLength="20"
+                    android:paddingBottom="14dp"
+                    android:paddingLeft="35dp"
+                    android:paddingTop="14dp"
+                    android:singleLine="true"
+                    android:gravity="left"
+                    android:textColor="@color/text_black_color"
+                    android:textColorHint="@color/text_gray_color"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+
+            <View style="@style/LineStyle"
+                android:layout_marginLeft="35dp"
+                android:layout_marginRight="35dp"/>
+
+
+            <Button
+                android:id="@+id/reg_btn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/blue_round_background"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="完成"
+                android:textColor="@color/white_color"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:padding="30dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注册即表示同意"
+                    android:textColor="@color/text_black_color"
+                    android:textSize="16sp" />
+                <TextView
+                    android:id="@+id/agreement_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="《用户注册协议》"
+                    android:textColor="@color/blue_color"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

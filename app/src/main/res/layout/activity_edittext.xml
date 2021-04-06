@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle" >
+
+    <RelativeLayout style="@style/titleBackGroundStyle" >
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:text="编辑资料" />
+
+    </RelativeLayout>
+
+    <View style="@style/LineStyle" />
+
+    <TextView
+        android:id="@+id/title_tv"
+        style="@style/MemoTitleTextStyle"
+        android:background="@color/gray_color"
+        android:paddingLeft="18dp"
+        android:text="基本信息" />
+
+    <View style="@style/LineStyle" />
+
+    <com.dq.itopic.views.InputControlEditText
+        android:id="@+id/inputContent"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:background="@color/white_color"
+        android:gravity="top"
+        android:padding="8dp"
+        android:textColor="@color/text_black_color"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/showLength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white_color"
+        android:gravity="right|center_vertical"
+        android:paddingBottom="4dp"
+        android:paddingRight="10dp"
+        android:paddingTop="4dp"
+        android:text="0/140 字"
+        android:textColor="@color/red_color"
+        android:textSize="12sp" />
+
+    <View style="@style/LineStyle" />
+
+    <Button
+        android:id="@+id/reg_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/blue_round_background"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:text="提交"
+        android:textColor="@color/white_color"
+        android:textSize="16sp" >
+    </Button>
+
+</LinearLayout>

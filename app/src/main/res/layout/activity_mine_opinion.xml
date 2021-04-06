@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle">
+
+    <RelativeLayout style="@style/titleBackGroundStyle" >
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:text="意见反馈" />
+    </RelativeLayout>
+
+    
+    <View style="@style/LineStyle"/>
+    <com.dq.itopic.views.InputControlEditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+
+
+        android:background="@drawable/white_single_round"
+        android:gravity="top"
+        android:hint="输入您的意见"
+ android:textColor="@color/text_black_color"
+        android:textSize="15sp"
+        android:maxLength="200"
+        android:padding="8dp" >
+
+        <requestFocus />
+    </com.dq.itopic.views.InputControlEditText>
+ <View style="@style/LineStyle"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color" >
+
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/orange_round_background"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="提交"
+            android:textColor="@color/white_color"
+            android:textSize="16sp" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

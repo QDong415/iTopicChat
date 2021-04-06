@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    style="@style/activityContainerStyle">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0" />
+
+    <View style="@style/LineStyle" />
+
+      <View android:layout_width="match_parent" android:layout_height="0.8dp" android:background="@color/white_color" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <RadioGroup
+            android:id="@+id/rgOperator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/navigation_color"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/chat_radio"
+                style="@style/buttombuttonstyle"
+                android:drawableTop="@drawable/main_tab_check_chat"
+                android:checked="true"
+                android:text="聊天" />
+
+            <RadioButton
+                android:id="@+id/mine_radio"
+                style="@style/buttombuttonstyle"
+                android:drawableTop="@drawable/main_tab_check_mine"
+                android:text="我的" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/rgOperator"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/unReadMessageCountTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|center"
+                    android:layout_marginLeft="14.0dip"
+                    android:layout_marginTop="3dip"
+                    android:background="@drawable/red_unread_bg"
+                    android:gravity="center"
+                    android:paddingLeft="5dip"
+                    android:paddingRight="5dip"
+                    android:singleLine="true"
+          				android:visibility="invisible"
+                    android:textColor="@color/white_color"
+                    android:textSize="10dp" />
+            </FrameLayout>
+  
+               <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" >
+
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

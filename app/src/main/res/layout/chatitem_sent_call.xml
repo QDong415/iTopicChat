@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp" >
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="@dimen/photo_chat_avatar_size"
+            android:layout_height="@dimen/photo_chat_avatar_size"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:src="@drawable/user_photo" />
+
+        <RelativeLayout
+            android:id="@+id/bubble_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_chat_activity"
+            android:layout_toLeftOf="@id/avatar_iv"
+            android:background="@drawable/rc_ic_bubble_right"
+            android:clickable="true"
+            android:minHeight="@dimen/photo_chat_avatar_size" >
+
+            <ImageView
+                android:id="@+id/bubble_logo_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/audio_receiver_right" />
+
+            <com.dq.itopic.views.emojitextview.EmojiconTextView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:focusable="false"
+                android:gravity="center|left"
+                android:lineSpacingExtra="2dp"
+                android:maxWidth="200.0dip"
+                android:layout_toRightOf="@+id/bubble_logo_iv"
+                android:paddingRight="4dip"
+                android:layout_marginLeft="6dp"
+                android:textColor="@color/black_black"
+                android:textSize="15sp"
+                app:qmui_linkBackgroundColor="@color/link_tv_background_color"
+                app:qmui_linkTextColor="#3399ff"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/msg_status_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/bubble_rl"
+            android:clickable="true"
+            android:src="@drawable/chat_send_failed"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:layout_toLeftOf="@+id/bubble_rl"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle"
+    android:gravity="center_horizontal" >
+
+    <RelativeLayout style="@style/titleBackGroundStyle" >
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:text="编辑资料" />
+ 
+    </RelativeLayout>
+
+    <View style="@style/LineStyle" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white_color"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/avatar_ll"
+                    style="@style/MemoBodyLinearLayoutClickStyle"
+                    android:paddingLeft="15dp" >
+
+                    <TextView
+                        style="@style/FormBodyGrayTextStyle"
+                        android:text="头像　" />
+
+                    <ImageView
+                        android:id="@id/user_head"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/user_photo" />
+
+                    <ImageView style="@style/ArrowRightStyle" />
+                </LinearLayout>
+
+                <View style="@style/LineStyle"   android:layout_marginLeft="15dp"/>
+
+                <LinearLayout
+                    android:id="@+id/realname_ll"
+                    style="@style/MemoBodyLinearLayoutClickStyle"
+                    android:paddingLeft="15dp" >
+
+                    <TextView
+                        style="@style/FormBodyGrayTextStyle"
+                        android:text="姓名　" />
+
+                    <TextView
+                        android:id="@+id/realname_tv"
+                        style="@style/FormBodyGrayPadding10EditTextStyle"
+                        android:hint="未填写" />
+
+                    <ImageView style="@style/ArrowRightStyle" />
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/age_ll"
+                    style="@style/MemoBodyLinearLayoutClickStyle"
+                    android:paddingLeft="15dp" >
+
+                    <TextView
+                        style="@style/FormBodyGrayTextStyle"
+                        android:text="年龄　" />
+
+                    <TextView
+                        android:id="@+id/age_tv"
+                        style="@style/FormBodyGrayPadding10EditTextStyle"
+                        android:hint="未填写" />
+
+                    <ImageView style="@style/ArrowRightStyle" />
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/sex_ll"
+                    style="@style/MemoBodyLinearLayoutClickStyle"
+                    android:paddingLeft="15dp" >
+
+                    <TextView
+                        style="@style/FormBodyGrayTextStyle"
+                        android:text="性别　" />
+
+                    <TextView
+                        android:id="@+id/sex_tv"
+                        style="@style/FormBodyGrayPadding10EditTextStyle"
+                        android:layout_weight="0.3"
+                        android:hint="未填写" />
+
+                    <ImageView style="@style/ArrowRightStyle" />
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/city_ll"
+                    style="@style/MemoBodyLinearLayoutClickStyle"
+                    android:paddingLeft="15dp" >
+
+                    <TextView
+                        style="@style/FormBodyGrayTextStyle"
+                        android:text="城市　" />
+
+                    <TextView
+                        android:id="@+id/city_tv"
+                        style="@style/FormBodyGrayPadding10EditTextStyle"
+                        android:hint="未填写" />
+
+                    <ImageView style="@style/ArrowRightStyle" />
+                </LinearLayout>
+
+                <View style="@style/LineStyle" />
+
+                <TextView
+                    style="@style/MemoTitleTextStyle"
+                    android:text="个人介绍" />
+
+                <View style="@style/LineStyle" />
+
+                <TextView
+                    android:id="@+id/introduce_tv"
+                    style="@style/IntroTextStyle"
+                    android:hint="未填写" />
+
+                <View style="@style/LineStyle" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="radius_corner">4dp</dimen>
+    <dimen name="navigation_height">48dp</dimen>
+    <dimen name="photo_chat_avatar_size">43dp</dimen>
+    <dimen name="mine_parallax_height">70dp</dimen>
+
+    <dimen name="topic_gridphoto_leftmargin">12dp</dimen>
+
+    <!-- huanxin -->
+        <dimen name="margin_chat_activity">5dp</dimen>
+
+
+    <color name="callkit_shadowcolor">#000000</color>
+
+    <dimen name="indicator_margin">10dp</dimen>
+    <dimen name="bar_height">32dp</dimen>
+    <dimen name="bar_tool_btn_width">56dp</dimen>
+    <dimen name="verticalspit_view_width">0.6dp</dimen>
+    <dimen name="horizontalspit_view_height">0.6dp</dimen>
+    <dimen name="item_emoticon_size_default">32dp</dimen>
+</resources>

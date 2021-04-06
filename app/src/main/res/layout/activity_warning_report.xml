@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activityContainerStyle" >
+
+    <RelativeLayout style="@style/titleBackGroundStyle" >
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:text="意见或举报" />
+    </RelativeLayout>
+
+    
+    <View style="@style/LineStyle"/>
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_gravity="center_horizontal"
+
+        android:background="@drawable/white_single_round"
+        android:gravity="top"
+        android:hint="说点什么吧"
+        android:inputType="textPostalAddress"
+        android:maxLength="200"
+        android:padding="8dp" >
+
+        <requestFocus />
+    </EditText>
+ <View style="@style/LineStyle"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color" >
+
+        <Button
+            android:id="@+id/reg_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/blue_round_background"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="提交"
+            android:textColor="@color/white_color"
+            android:textSize="16sp" >
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>

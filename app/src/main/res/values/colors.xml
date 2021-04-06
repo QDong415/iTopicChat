@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="user_bg">#F8F8F8</color>
+    <color name="tag_bg">#fff</color>
+    <color name="white_press_color">#D9D9D9</color>
+    <color name="black_gray">#000</color>
+    <color name="black_white">#000</color>
+    <color name="black_black">#000</color>
+    <drawable name="gray_rect">#F0F0F0</drawable>
+    <color name="gray_color">#EEEEEE</color>
+
+    <color name="green_color">#1CC4AD</color>
+       <color name="green_press_color">#159987</color>
+
+
+    <color name="blue_color">#3399ff</color>
+
+     <color name="orange_press_color">#c25229</color>
+
+    <color name="navigation_color">#F6F6F6</color>
+
+    <drawable name="personal_tab_press">#33B5E5</drawable>
+
+    <color name="white_color">#FFF</color>
+     <color name="text_black_color">#5B5B5B</color>
+      <color name="text_gray_color">#919191</color>
+    <color name="text_gray_dark_color">#686868</color>
+ <color name="background_color">#F3F3F3</color>
+
+            <color name="red_color">#FE6766</color>
+            <color name="red_press_color">#E64C64</color>
+
+               <drawable name="gray_rect_press">#D9D9D9</drawable>
+    <color name="divider_color">#E3E3E3</color>
+    <color name="orange_color">#FC6F1D</color>
+  <color name="transparent">#00000000</color>
+    <color name="blue_light_color">#419DEA</color>
+    <!--4873D9 # -->
+      <color name="blue_dark_color">#5E8DF9</color>
+       <color name="blue_dark_press_color">#003399</color>
+
+    <drawable name="white_drawable">#FFF</drawable>
+    <drawable name="white_press_drawable">#F2F2F2</drawable>
+
+    <!-- Chat Activity -->
+    <color name="rc_voip_background_color">#141C24</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="btn_send_textcolor">@color/white</color>
+
+    <color name="toolbar_btn_select">#D9D9D9</color>
+    <color name="toolbar_btn_nomal">@color/input_extend</color>
+
+    <color name="input_bg">#F7F7F7</color>
+    <color name="input_extend">#EDEDED</color>
+</resources>

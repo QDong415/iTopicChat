@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_rl"
+    style="@style/activityContainerStyle" >
+
+    <RelativeLayout style="@style/titleBackGroundStyle" >
+
+        <ImageView style="@style/titleBackStyle" />
+
+        <TextView
+            style="@style/titleTextStyle"
+            android:text="聊天" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/title_line"
+        android:layout_below="@+id/title_layout"
+        style="@style/LineStyle" />
+
+    <com.dq.itopic.activity.chat.keyboard.ChatKeyBoard
+        android:id="@+id/ek_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title_line"
+        android:orientation="vertical">
+
+        <com.dq.itopic.activity.chat.listview.TopAutoRefreshListView
+            android:id="@+id/lv_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="#00000000"
+            android:divider="@null"
+            android:dividerHeight="5dp"
+            android:fadingEdge="none"
+            android:listSelector="#00000000"
+            android:paddingBottom="8dp"
+            android:scrollbarStyle="outsideOverlay" />
+
+    </com.dq.itopic.activity.chat.keyboard.ChatKeyBoard>
+
+</RelativeLayout>
+

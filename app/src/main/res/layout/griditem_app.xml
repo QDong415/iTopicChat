@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="97dp" >
+
+    
+    <ImageView
+        android:id="@+id/imageview"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user_photo" />
+
+
+    <TextView
+        android:id="@+id/groupname_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="6dp"
+        android:text="加载中"
+        android:singleLine="true"
+        android:textColor="@color/text_black_color"
+        android:textSize="15sp" />
+
+</RelativeLayout>

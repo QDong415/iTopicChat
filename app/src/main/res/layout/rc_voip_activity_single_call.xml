@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:background="#141C24"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/rc_voip_call_large_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141C24"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cameraoff_center"
+            android:layout_height="84dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rc_voip_call_small_preview"
+        android:layout_width="100dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="right|top"
+        android:background="#2E3641"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cameraoff_center"
+            android:layout_height="42dp" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/rc_voip_call_information"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/rc_voip_user_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@+id/rc_voip_call_minimize">
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/rc_voip_video_mute_cb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/rc_voip_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="25dp"
+            android:drawableTop="@drawable/rc_voip_disable_camera_selector"
+            android:textSize="15sp"
+            android:drawablePadding="10dp"
+            android:background="@null"
+            android:checked="false"
+            android:button="@null"
+            android:visibility="gone"
+            android:text="@string/rc_voip_disable_camera"
+            android:textColor="@color/white_color"/>
+
+        <FrameLayout
+            android:id="@+id/rc_voip_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+        </FrameLayout>
+
+    </RelativeLayout>
+</FrameLayout>

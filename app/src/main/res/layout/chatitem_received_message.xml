@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="13dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp" >
+
+        <ImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="@dimen/photo_chat_avatar_size"
+            android:layout_height="@dimen/photo_chat_avatar_size"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:src="@drawable/user_photo" />
+
+        <RelativeLayout
+            android:id="@+id/bubble_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_chat_activity"
+            android:layout_toRightOf="@id/avatar_iv"
+            android:background="@drawable/rc_ic_bubble_left"
+            android:clickable="true"
+            android:minHeight="@dimen/photo_chat_avatar_size" >
+
+            <com.dq.itopic.views.emojitextview.EmojiconTextView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/content_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:focusable="false"
+                android:paddingLeft="5dp"
+                android:gravity="center|left"
+                android:lineSpacingExtra="2dp"
+                android:maxWidth="200.0dip"
+                android:textColor="@color/black_white"
+                app:qmui_linkBackgroundColor="@color/link_tv_background_color"
+                app:qmui_linkTextColor="#3399ff"
+                android:textSize="15sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>
