@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.dq.itopic"
-    android:versionCode="39"
-    android:versionName="10.1">
+    android:versionCode="40"
+    android:versionName="11.0">
 
     <application
         android:name="com.dq.itopic.manager.ITopicApplication"

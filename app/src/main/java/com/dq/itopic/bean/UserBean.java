@@ -30,13 +30,6 @@ public class UserBean implements Serializable {
 	private String cid;//个推clientid,如果与客户端自己取到的不同,客户端需要调用 /User/Update 更新cid
 	private String hwid;//华为推送token,如果与客户端自己取到的不同,客户端需要调用 /User/Update 更新hwid
 
-	private int followcount;
-	private int fanscount;
-	private int topiccount;
-	private int videocount;
-
-	//查看他人接口才有
-	private int follow;
 
 	public String getAvatar() {
 		return avatar;
@@ -79,26 +72,12 @@ public class UserBean implements Serializable {
 	}
 
 
-
-	public int getFanscount() {
-		return fanscount;
-	}
-
-
 	public String getCid() {
 		return cid;
 	}
 
 	public void setCid(String cid) {
 		this.cid = cid;
-	}
-
-	public int getFollow() {
-		return follow;
-	}
-
-	public void setFollow(int follow) {
-		this.follow = follow;
 	}
 
 	public String getHwid() {
@@ -140,35 +119,6 @@ public class UserBean implements Serializable {
 
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	public int getTopiccount() {
-		return topiccount;
-	}
-
-	public void setTopiccount(int topiccount) {
-		this.topiccount = topiccount;
-	}
-
-
-	public void setFanscount(int fanscount) {
-		this.fanscount = fanscount;
-	}
-
-	public int getFollowcount() {
-		return followcount;
-	}
-
-	public void setFollowcount(int followcount) {
-		this.followcount = followcount;
-	}
-
-	public int getVideocount() {
-		return videocount;
-	}
-
-	public void setVideocount(int videocount) {
-		this.videocount = videocount;
 	}
 
 	public int getSlience() {
