@@ -5,6 +5,7 @@
 
 ### 效果gif图：
 ![](http://qiniu.itopic.com.cn/chat1_small.gif)![](http://qiniu.itopic.com.cn/chat3_small.gif)
+![](http://qiniu.itopic.com.cn/chat4.gif)![](http://qiniu.itopic.com.cn/chat5.gif)
 ### 现功能：
 
 - ✅ 一整套完善的聊天IM系统，包括ui，数据库，后台接口全开源
