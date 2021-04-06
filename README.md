@@ -1,5 +1,11 @@
 # iTopicChat
 
+### 安装体验：
+<img src="http://qiniu.itopic.com.cn/itopicchat_11.0.png">
+
+### 效果gif图：
+<img src="http://qiniu.itopic.com.cn/chat1.gif">
+
 ### 现功能：
 
 - ✅ 一整套完善的聊天IM系统，包括ui，数据库，后台接口全开源
@@ -20,6 +26,7 @@
 - ☑️ 小米手机对接小米push；oppo，vivo同理，目前代码已经封装的很好，再添加或更换第3方push很简单
 - ☑️ 聊天界面listView更换为recycleView
 - ☑️ 聊天气泡布局再用ConstraintLayout降层级
+
 
 ### 看一下消息的Bean，就明白整体架构
 ```java
