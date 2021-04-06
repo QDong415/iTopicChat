@@ -16,5 +16,13 @@
 
 	<View style="@style/LineStyle" />
 
-	<include layout="@layout/activity_listview_refresh_paged"></include>
+	<FrameLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<com.dq.itopic.views.PagedListView
+			android:id="@+id/paged_listview"
+			style="@style/ListViewStyle" />
+	</FrameLayout>
+
 </LinearLayout>

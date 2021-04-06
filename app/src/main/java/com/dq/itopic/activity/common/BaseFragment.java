@@ -1,16 +1,13 @@
 package com.dq.itopic.activity.common;
 
-import com.dq.itopic.R;
 import com.dq.itopic.layout.LoadingDialog;
 import com.dq.itopic.manager.ITopicApplication;
-import com.dq.itopic.views.TipsToast;
 
 import android.content.Context;
 import androidx.fragment.app.Fragment;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import java.lang.reflect.Field;
 
@@ -39,54 +36,9 @@ public class BaseFragment extends Fragment {
 		progress = new LoadingDialog(mContext, cancel);
 	}
 
-	public void showErrorToast() {
-		showFailTips("无法连接到网络\n请稍后再试");
-	}
-
-	public void showFailTips(String content) {
-		if (getActivity()!=null && isVisible()) {
-			TipsToast tipsToast = TipsToast.makeText(getActivity(),content, TipsToast.LENGTH_SHORT);	
-			tipsToast.show();
-		}
-	}
-
-	public void showSuccessTips(String content) {
-		if (getActivity()!=null && isVisible()) {
-			TipsToast tipsToast = TipsToast.makeText(getActivity(), content, TipsToast.LENGTH_SHORT);	
-			tipsToast.setIcon(R.drawable.tips_success);
-			tipsToast.show();
-		}
-	}
-	
-	public void showErrorToast(String err) {
-		if (getActivity()!=null && isVisible()) {
-			Toast.makeText(getActivity(), err, Toast.LENGTH_SHORT).show();
-		}
-	}
-
-	public void BackButtonListener() {
-		getBaseActivity().backButtonListener();
-	}
-
 	public ITopicApplication getITopicApplication() {
 		return (ITopicApplication) getActivity().getApplication();
 	}
-
-	public void jumpToHisInfoActivity( String UserID,
-			String realName,String headImageBean) {
-		getBaseActivity().jumpToHisInfoActivity(UserID, realName, headImageBean);
-	}
-	
-	public void jumpToChatActivity(final String hisUserID,
-			final String hisRealName,final String headImageBean,final int chatType) {
-		getBaseActivity().jumpToChatActivity(hisUserID, hisRealName, headImageBean, chatType);
-	}
-
-
-	public void setTitleName(String titleName) {
-		getBaseActivity().setTitleName(titleName);
-	}
-
 
 	public void hideKeyboard(View v) {
 		((InputMethodManager) getActivity().getSystemService(getActivity().INPUT_METHOD_SERVICE))

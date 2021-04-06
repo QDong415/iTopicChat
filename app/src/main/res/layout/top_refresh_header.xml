@@ -7,6 +7,7 @@
 
 
     <ProgressBar
+        android:id="@+id/pull_to_refres_header_progressbar"
         android:layout_width="16dp"
         android:layout_height="16dp"
         android:gravity="center"
