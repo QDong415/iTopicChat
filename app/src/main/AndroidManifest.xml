@@ -41,7 +41,7 @@
             android:name="com.dq.itopic.activity.chat.search.SearchTagActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.dq.itopic.activity.chat.search.SearchResultRootActivity"
+            android:name="com.dq.itopic.activity.chat.search.UserListActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name="com.dq.itopic.activity.chat.ChatActivity"

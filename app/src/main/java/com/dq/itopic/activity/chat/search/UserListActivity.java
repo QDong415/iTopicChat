@@ -29,12 +29,10 @@ import com.dq.itopic.tools.OkHttpHelper;
 import com.dq.itopic.tools.ValueUtil;
 import com.dq.itopic.tools.imageloader.GlideLoaderUtil;
 import com.dq.itopic.views.PagedListView;
-import com.dq.itopic.views.PtrSimpleFrameLayout;
 
 public class UserListFragment extends BaseFragment {
 
 	private int pageNumber = 1;
-	private PtrSimpleFrameLayout mPtrFrame;
 	private PagedListView pagedListView;
 	
 	private View mEmptyLayout;
@@ -71,27 +69,7 @@ public class UserListFragment extends BaseFragment {
 
 		pagedListView = (PagedListView) getView().findViewById(R.id.paged_listview);
 
-		mPtrFrame = (PtrSimpleFrameLayout) getView().findViewById(R.id.rotate_header_list_view_frame);
-		mPtrFrame.setEnabledNextPtrAtOnce(true);
-		mPtrFrame.setLoadingMinTime(600);
-		mPtrFrame.setPtrHandler(new PtrHandler() {
-
-			@Override
-			public void onRefreshBegin(PtrFrameLayout frame) {
-				requireFirstPageDate();
-			}
-
-			@Override
-			public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-				return PtrDefaultHandler.checkContentCanBePulledDown(frame, pagedListView, header);
-			}
-		});
-		mPtrFrame.postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				mPtrFrame.autoRefresh();
-			}
-		}, 150);
+		requireFirstPageDate();
 	}
 
 	private void requireFirstPageDate() {
@@ -103,7 +81,6 @@ public class UserListFragment extends BaseFragment {
 			@Override
 			public void onSuccess(Response okhttpResponse, HashMapListResponse response) {
 				// TODO Auto-generated method stub
-				mPtrFrame.refreshComplete();
 				if (response.isSuccess()) {
 					list = response.getData().getItems();
 					pagedListView.onFinishLoading(response.getData().hasMore());
@@ -120,7 +97,6 @@ public class UserListFragment extends BaseFragment {
 			@Override
 			public void onFailure(Request okhttpRequest, Exception e) {
 				// TODO Auto-generated method stub
-				mPtrFrame.refreshComplete();
 				pagedListView.onFinishLoading(false);
 			}
 		});
