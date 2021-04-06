@@ -4,8 +4,8 @@
 <img src="http://qiniu.itopic.com.cn/itopicchat_11.0.png">
 
 ### 效果gif图：
-<img src="http://qiniu.itopic.com.cn/chat1_small.gif">
-
+<img src="http://qiniu.itopic.com.cn/chat1_small.gif" width="45%">
+<img src="http://qiniu.itopic.com.cn/chat2_small.gif" width="45%">
 ### 现功能：
 
 - ✅ 一整套完善的聊天IM系统，包括ui，数据库，后台接口全开源
