@@ -5,7 +5,7 @@
 
 ### 效果gif图：
 ![](http://qiniu.itopic.com.cn/chat1_final.gif)
-![](http://qiniu.itopic.com.cn/chat4.gif)![](http://qiniu.itopic.com.cn/chat5.gif)
+![](http://qiniu.itopic.com.cn/chat4.gif)![](http://qiniu.itopic.com.cn/chat5_small.gif)
 ### 现功能：
 
 - ✅ 一整套完善的聊天IM系统，包括ui，数据库，后台接口全开源
@@ -106,85 +106,17 @@ public class ChatBean {
 
 ```
 
-#### h4 标题
-##### h5 标题
-###### h6 标题
+_更多代码讲解我就先不发了，写多了你们也不会看，自己下载代码去吧_
 
+### 安装体验（上面有，怕你没看到再发一遍）：
+<img src="http://qiniu.itopic.com.cn/itopicchat_11.0.png">
 
-## 水平线
+### 后续别的开源计划：
+1. ios版本的IM，后台php接口
+2. 仿小红书或快手的 详情页左滑进入个人主页demo
+3. 直播，连麦demo
 
-___
+_对项目有什么问题，我24小时在线，QQ：285275534，微信：dz89415_
 
----
+_另外，求广州、成都、南京地区的面试机会，android岗位，或者ios岗位，互联网公司即可，谢谢_
 
-***
-
-
-## 文本样式
-
-**This is bold text**
-
-__This is bold text__
-
-*This is italic text*
-
-_This is italic text_
-
-~~Strikethrough~~
-
-
-## 列表
-
-
-
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
-  - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
-    - Nulla volutpat aliquam velit
-+ Very easy!
-
-有序
-
-1. Lorem ipsum dolor sit amet
-2. Consectetur adipiscing elit
-3. Integer molestie lorem at massa
-
-
-1. You can use sequential numbers...
-1. ...or keep all the numbers as `1.`
-
-Start numbering with offset:
-
-57. foo
-1. bar
-
-
-## 代码
-
-Inline `code`
-
-Indented code
-
-    // Some comments
-    line 1 of code
-    line 2 of code
-    line 3 of code
-
-
-Block code "fences"
-
-```
-Sample text here...
-```
-
-Syntax highlighting
-
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```
