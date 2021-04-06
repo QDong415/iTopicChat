@@ -4,7 +4,7 @@
 <img src="http://qiniu.itopic.com.cn/itopicchat_11.0.png">
 
 ### 效果gif图：
-<img src="http://qiniu.itopic.com.cn/chat1.gif">
+<img src="http://qiniu.itopic.com.cn/chat1_small.gif">
 
 ### 现功能：
 
