@@ -102,7 +102,7 @@ public class ConversationFragment extends BaseMessageFragment implements ChatMan
 			@Override
 			public void onClick(View view) {
 				Intent 	i = new Intent(getActivity(),SearchTagActivity.class);
-				i.putExtra("newActivity",getActivity().getApplication().getPackageName()+".activity.chat.search.SearchResultRootActivity");
+				i.putExtra("newActivity",getActivity().getApplication().getPackageName()+".activity.chat.search.UserListActivity");
 				startActivity(i);
 			}
 		});

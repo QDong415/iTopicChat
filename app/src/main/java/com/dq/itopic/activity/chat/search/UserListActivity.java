@@ -3,10 +3,6 @@ package com.dq.itopic.activity.chat.search;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import in.srain.cube.views.ptr.PtrDefaultHandler;
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
 import okhttp3.Request;
 import okhttp3.Response;
 
@@ -21,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dq.itopic.R;
+import com.dq.itopic.activity.common.BaseActivity;
 import com.dq.itopic.activity.common.BaseFragment;
 import com.dq.itopic.bean.HashMapListResponse;
 import com.dq.itopic.tools.ServiceConstants;
@@ -30,7 +27,7 @@ import com.dq.itopic.tools.ValueUtil;
 import com.dq.itopic.tools.imageloader.GlideLoaderUtil;
 import com.dq.itopic.views.PagedListView;
 
-public class UserListFragment extends BaseFragment {
+public class UserListActivity extends BaseActivity {
 
 	private int pageNumber = 1;
 	private PagedListView pagedListView;
@@ -39,17 +36,10 @@ public class UserListFragment extends BaseFragment {
 	private List<HashMap<String,String>> list;
 	private MemberAdapter adapter;
 
-	private HashMap<String,String> params;
-
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-							 Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.activity_listview_refresh_paged,container, false);
-	}
-
-	@Override
-	public void onActivityCreated(Bundle savedInstanceState) {
-		super.onActivityCreated(savedInstanceState);
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_listview_refresh_paged_title);
 		initView();
 		initListener();
 	}
@@ -57,24 +47,19 @@ public class UserListFragment extends BaseFragment {
 	private void initView() {
 		// TODO Auto-generated method stub
 		initProgressDialog();
+		setTitleName(""+getIntent().getStringExtra("keyword"));
+		findViewById(R.id.title_right).setVisibility(View.GONE);
 
-		Bundle bundle = getArguments();
-		if(bundle != null){
-			this.params = (HashMap<String, String>) bundle.getSerializable("params");
-		} else {
-			this.params = new HashMap<>();
-		}
+		mEmptyLayout =  LayoutInflater.from(UserListActivity.this).inflate(R.layout.listview_empty, null);
 
-		mEmptyLayout =  LayoutInflater.from(getActivity()).inflate(R.layout.listview_empty, null);
-
-		pagedListView = (PagedListView) getView().findViewById(R.id.paged_listview);
+		pagedListView = (PagedListView) findViewById(R.id.paged_listview);
 
 		requireFirstPageDate();
 	}
 
 	private void requireFirstPageDate() {
-		HashMap<String, String> data = new HashMap<String, String>();
-		data.putAll(params);
+		HashMap<String,String> data = new HashMap<>();
+		data.put("keyword",getIntent().getStringExtra("keyword"));
 		data.put("page", "1");
 		OkHttpHelper.getInstance().get(ServiceConstants.IP + "user/getlist", data, new NetWorkCallback<HashMapListResponse>(HashMapListResponse.class,getITopicApplication()) {
 
@@ -84,13 +69,13 @@ public class UserListFragment extends BaseFragment {
 				if (response.isSuccess()) {
 					list = response.getData().getItems();
 					pagedListView.onFinishLoading(response.getData().hasMore());
-					adapter = new MemberAdapter(getBaseActivity(), list);
+					adapter = new MemberAdapter(UserListActivity.this, list);
 					pagedListView.setAdapter(adapter);
 					pageNumber = 2;
 					pagedListView.setEmptyView(list.isEmpty() ? mEmptyLayout:null);
 				} else {
 					pagedListView.onFinishLoading(false);
-					showErrorToast(response.getMessage());
+					showToast(response.getMessage());
 				}
 			}
 
@@ -104,14 +89,14 @@ public class UserListFragment extends BaseFragment {
 	
 	private void initListener() {
 		// TODO Auto-generated method stub
-		BackButtonListener();
+		backButtonListener();
 		pagedListView.setOnLoadMoreListener(new PagedListView.OnLoadMoreListener() {
 
 			@Override
 			public void onLoadMoreItems() {
 				// TODO Auto-generated method stub
 				HashMap<String, String> data = new HashMap<String, String>();
-				data.putAll(params);
+				data.put("keyword",getIntent().getStringExtra("keyword"));
 				data.put("page", ""+pageNumber);
 				OkHttpHelper.getInstance().get(ServiceConstants.IP + "user/getlist", data, new NetWorkCallback<HashMapListResponse>(HashMapListResponse.class,getITopicApplication()) {
 
@@ -126,7 +111,7 @@ public class UserListFragment extends BaseFragment {
 							pageNumber++;
 						} else {
 							pagedListView.onFinishLoading(false);
-							showErrorToast(pageResponse.getMessage());
+							showToast(pageResponse.getMessage());
 						}
 					}
 
@@ -190,7 +175,7 @@ public class UserListFragment extends BaseFragment {
 
 			viewHolder.item_name.setText(bean.get("name"));
 
-			GlideLoaderUtil.loadImage(UserListFragment.this,ValueUtil.getQiniuUrlByFileName(bean.get("avatar"),true)
+			GlideLoaderUtil.loadImage(UserListActivity.this,ValueUtil.getQiniuUrlByFileName(bean.get("avatar"),true)
 					,R.drawable.user_photo,viewHolder.avatar);
 
 			return convertView;

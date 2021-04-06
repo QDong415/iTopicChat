@@ -8,7 +8,16 @@ import com.dq.itopic.tools.ValueUtil;
 
 import java.util.HashMap;
 
-public class ChatBean{
+public class ChatBean {
+
+    /**
+     * 每一条字段后面的注释表明它的数据来源 ：
+     *
+     * sqlite表示该变量来自手机本地sqlite数据库，服务器上无此字段，比如 是否已读，是否发送成功
+     * service表示该变量来自服务器接口返回
+     * service+sqlite 表示服务器也会返回，手机端也会去存
+     * temp表示不入库也不是网络请求，只是Activity为了临时处理
+     */
 
     public final static int INPROGRESS = 0;//客户端自己定义的。发送中
     public final static int SUCCESS = 1;//客户端自己定义的。发送成功
@@ -27,49 +36,49 @@ public class ChatBean{
     public final static int SUBTYPE_CALL_AUDIO = 10;//电话消息
     public final static int SUBTYPE_CALL_VIDEO = 11;//视频消息
 
-    private int dbid;//手机端本地数据库主键
-    private int msgid;//服务器返回的主键id
+    private int dbid;//手机端本地数据库主键（sqlite）
+    private int msgid;//服务器返回的主键id（service + sqlite）
 
     //如果是群聊（type==2），这里是发布人id; 如果是单聊，这里是对方id
     //如果是服务器返回的ChatBean，这里是发布人id，也就是对方id；
     //如果是本地发消息时候创建的单聊ChatBean，就用代码设为对方id； 如果是本地发消息时候创建的群聊ChatBean，就用代码设为自己
-    private String other_userid;
-    private String other_name;
-    private String other_photo;
+    private String other_userid; //（service + sqlite）
+    private String other_name; //（service + sqlite）
+    private String other_photo; //（service + sqlite）
 
     //如果是群聊（type==2），这里是群id；如果是单聊，这里是对方的userid（同other_userid）
-    private String targetid;
+    private String targetid; //（service + sqlite）
 
-    private String content;//消息文本内容
-    private int create_time;//1491545686
-    private int type;//1为单聊 2为群聊 3为聊天时候的tips 4系统通知
-    private int subtype;//0为文本 1为图片 2为语音 目前只可能为0
-    private int issender;//当前登录账号是这个消息的发送者
-    private int hadread;//0默认，未读
+    private String content;//消息文本内容 //（service + sqlite）
+    private int create_time;//1491545686 //（service + sqlite）
+    private int type;//1为单聊 2为群聊 3为聊天时候的tips 4系统通知 //（service + sqlite）
+    private int subtype;//0为文本 1为图片 2为语音 目前只可能为0 //（service + sqlite）
+    private int issender;//当前登录账号是这个消息的发送者 //（sqlite）
+    private int hadread;//0默认，未读 //（sqlite）
 
     //extend = 服务器返回的json，如果subtype是1图片，那么extend是{"height":2340,"width":1080}
     //如果subtype是2语音条，那么extend是{"duration":"6"}
-    private String extend;
+    private String extend; //（service + sqlite）
 
     //filename = 附件本地沙盒文件名，同时也是七牛文件名
     //如果subtype是1图片，或者2语音条，那么就是文件名
     //如果subtype是11或者10电话消息，那么就是1611:800018:1586864352 （发送人id:接受人id:时间戳）
-    private String filename;
+    private String filename; //（service + sqlite）
 
     // 图片
-    private float thumbnailImageWidth;//客户端自己定义的，从extend解析出来的图片宽
-    private float thumbnailImageHeight;//客户端自己定义的，从extend解析出来的图片高
-    private int fileUploadProgress;//附件上传进度，范围为0--100
+    private float thumbnailImageWidth;//客户端自己定义的，从extend解析出来的图片宽 //（temp)
+    private float thumbnailImageHeight;//客户端自己定义的，从extend解析出来的图片高 //（temp)
+    private int fileUploadProgress;//附件上传进度，范围为0--100 //（temp)
 
     //语音条
-    private int duration;//秒,从extend解析出来的
-    private int played;//0==没播放过，1==播放过，从extend解析出来的
+    private int duration;//秒,从extend解析出来的 //（temp)
+    private int played;//0==没播放过，1==播放过，从extend解析出来的 //（temp)
 
-    private int state;//客户端自己定义的。发送状态
-    private int hisTotalUnReadedChatCount;//客户端自己定义的。与这个人的所有的未读消息数量
+    private int state;//客户端自己定义的。发送状态 //（sqlite)
+    private int hisTotalUnReadedChatCount;//客户端自己定义的。与这个人的所有的未读消息数量 // (temp)
 //    private String timeLag;//client定义的。直接显示的时间
-    private String client_messageid;//客户端自己定义的。messageid
-    private boolean needShowTimeTips;//客户端自己定义的。是否要显示时间tips
+    private String client_messageid;//客户端自己定义的临时消息id。// (sqlite)
+    private boolean needShowTimeTips;//客户端自己定义的。是否要显示时间tips //（temp)
 
     public boolean isNeedShowTimeTips() {
         return needShowTimeTips;

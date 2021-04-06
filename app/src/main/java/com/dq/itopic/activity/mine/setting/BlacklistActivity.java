@@ -3,9 +3,6 @@ package com.dq.itopic.activity.mine.setting;
 import java.util.HashMap;
 import java.util.List;
 
-import in.srain.cube.views.ptr.PtrDefaultHandler;
-import in.srain.cube.views.ptr.PtrFrameLayout;
-import in.srain.cube.views.ptr.PtrHandler;
 import okhttp3.Request;
 import okhttp3.Response;
 
@@ -17,7 +14,6 @@ import android.view.ViewGroup;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dq.itopic.R;
@@ -34,15 +30,12 @@ import com.dq.itopic.tools.ValueUtil;
 import com.dq.itopic.tools.imageloader.GlideLoaderUtil;
 import com.dq.itopic.views.CircleImageView;
 import com.dq.itopic.views.PagedListView;
-import com.dq.itopic.views.PtrSimpleFrameLayout;
 
 /**
  * 黑名单列表页面
- * 
  */
 public class BlacklistActivity extends BaseActivity {
 
-	private PtrSimpleFrameLayout mPtrFrame;
 	private PagedListView pagedListView;
 
 	private View mEmptyLayout;
@@ -67,27 +60,7 @@ public class BlacklistActivity extends BaseActivity {
 
 		pagedListView = (PagedListView) findViewById(R.id.paged_listview);
 
-		mPtrFrame = (PtrSimpleFrameLayout) findViewById(R.id.rotate_header_list_view_frame);
-		mPtrFrame.setEnabledNextPtrAtOnce(true);
-		mPtrFrame.setLoadingMinTime(600);
-		mPtrFrame.setPtrHandler(new PtrHandler() {
-
-			@Override
-			public void onRefreshBegin(PtrFrameLayout frame) {
-				requireFirstPageDate();
-			}
-
-			@Override
-			public boolean checkCanDoRefresh(PtrFrameLayout frame, View content, View header) {
-				return PtrDefaultHandler.checkContentCanBePulledDown(frame, pagedListView, header);
-			}
-		});
-		mPtrFrame.postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				mPtrFrame.autoRefresh();
-			}
-		}, 150);
+		requireFirstPageDate();
 	}
 
 	private void requireFirstPageDate() {
@@ -99,7 +72,6 @@ public class BlacklistActivity extends BaseActivity {
 			@Override
 			public void onSuccess(Response okhttpResponse, UserBaseListResponse response) {
 				// TODO Auto-generated method stub
-				mPtrFrame.refreshComplete();
 				if (response.isSuccess()) {
 					list = response.getData().getItems();
 					pagedListView.onFinishLoading(response.getData().hasMore());
@@ -116,7 +88,6 @@ public class BlacklistActivity extends BaseActivity {
 			@Override
 			public void onFailure(Request okhttpRequest, Exception e) {
 				// TODO Auto-generated method stub
-				mPtrFrame.refreshComplete();
 				pagedListView.onFinishLoading(false);
 			}
 		});
@@ -251,7 +222,6 @@ public class BlacklistActivity extends BaseActivity {
 				viewHolder = new ViewHolder();
 				convertView = mInflater.inflate(R.layout.listitem_follower,
 						null);
-
 				viewHolder.name_tv = (TextView) convertView
 						.findViewById(R.id.name_tv);
 				viewHolder.avatar_iv = (CircleImageView) convertView
@@ -272,7 +242,6 @@ public class BlacklistActivity extends BaseActivity {
 	private static class ViewHolder {
 		private TextView name_tv;
 		private CircleImageView avatar_iv;
-		private ImageView vip_iv;
 	}
 
 }
