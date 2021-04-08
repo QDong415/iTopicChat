@@ -666,8 +666,11 @@ public class SingleCallActivity extends BaseCallActivity implements Handler.Call
         mLocalVideo = null;
         removeFromParent(mRemoteVideo);
         mRemoteVideo = null;
-    }
 
+        //官方demo里没有这两句，但是我发现不加第一句会内存泄漏，然后我同理推出了第2句
+        callManager.mRtcEngine.setupLocalVideo(null);
+        callManager.mRtcEngine.setupRemoteVideo(null);
+    }
 
     public void onMinimizeClick(View view) {
         super.onMinimizeClick(view);
